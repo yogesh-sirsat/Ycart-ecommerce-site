@@ -1,0 +1,21 @@
+{% extends 'shop/basic.html' %}
+{% block title%} YCart{% endblock %}
+{% block body %}
+<div class="container mt-5">
+    
+  <div class="jumbotron">
+    <h1><b>Payment Status</b> regarding your order Id {{response.ORDERID}}</h1>
+    <p>{{response}}</p>
+    {% if response.RESPCODE == '01' %}
+    <a class="btn btn-lg btn-success" href="#" role="button">ORDER SUCCESS</a>
+    {% else %}
+    <a class="btn btn-lg btn-danger" href="#" role="button">ORDER FAILURE</a>
+    {% endif%}
+  </div>
+
+</div>
+{% endblock %}
+{% block js %}
+<script>
+</script>
+{% endblock %}

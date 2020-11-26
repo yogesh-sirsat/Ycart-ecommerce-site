@@ -1,0 +1,45 @@
+{% extends 'shop/basic.html' %}
+{% block title%} Contact Us - YCart{% endblock %}
+{% block contactactive %} active {% endblock contactactive %}
+{% block body %}
+
+<!--     <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="false">&times;</span>
+      </button>
+    </div>  -->
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Submitted!!</strong> {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="false">&times;</span>
+    </button>
+    {% endfor %}
+    </div> 
+{% endif %}
+
+<div class="container my-5">
+    <h1>Contact Us</h1><br>
+    <form action="/shop/contact/" method="post">{% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name='name' placeholder="Enter Your Name">
+        </div>
+        <div class="form-group">
+            <label for="name">Email</label>
+            <input type="email" class="form-control" id="email" name='email' placeholder="Enter Your Email">
+        </div>
+        <div class="form-group">
+            <label for="name">Phone</label>
+            <input type="tel" class="form-control" id="phone" name='phone' placeholder="Enter Your Phone Number">
+        </div>
+        <div class="form-group">
+            <label for="desc">How May We Help You?</label>
+            <textarea class="form-control" id="desc" name='desc' rows="6"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+{% endblock %}
