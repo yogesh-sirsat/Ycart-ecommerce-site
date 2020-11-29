@@ -6,8 +6,9 @@ I didn't edited admin page as my second project dope blog if needed we can edit 
 
 *Features
 
-1. we can add to cart products then buy total
-2. add to cart on home screen whenever we see product we directly add to cart
-3. tracker: we can update shipping status which will seen in tracker page
-4. for products in more datails and products user experience we have blog page
-5. for payment paytm's api method used
+1. we can add to cart products then buy total.
+2. add to cart on home screen whenever we see product we directly add to cart.
+3. tracker: we can update shipping status which will seen in tracker page.
+4. for products in more datails and products user experience we have blog page.
+5. for payment paytm's api method used.
+6. search option which will detect searched keyword in products title and description.
